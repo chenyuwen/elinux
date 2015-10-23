@@ -24,17 +24,13 @@
 -   [CWLinux](http://www.cwlinux.com/), 香港
 -   [DENX Software Engineering](http://www.denx.de/)
 -   [Driving Devices Limited](http://www.drivingdevices.com/), 英国
--   [e-con Systems Inc.](http://www.e-consystems.com/embeddedlinux.asp),
-    world wide
--   [Embedded Alley](http://www.embeddedalley.com/), 全球 (gone -
-    was acquired by Mentor Graphics)
+-   [e-con Systems Inc.](http://www.e-consystems.com/embeddedlinux.asp), 全球
+-   [Embedded Alley](http://www.embeddedalley.com/), 全球 (被Mentor Graphics收购)
 -   [Embedded Bits](http://www.embedded-bits.co.uk), 英国, 全球
--   [Embest](http://www.armkits.com/), 中国 (acquired by Premier
-    Farnell/element14)
--   [Embedded Software Foundry Limited](http://www.esfnet.co.uk/),
-    Sheffield, UK (gone - acquired by William Matthew Limited)
--   [Essensium/Mind](http://www.mind.be/), Belgium
--   [FemtoLinux](http://www.femtolinux.com), Israel
+-   [Embest](http://www.armkits.com/), 中国 (被Premier Farnell/element14集团收购)
+-   [Embedded Software Foundry Limited](http://www.esfnet.co.uk/), 设菲尔德, 英国 (被William Matthew有限公司收购)
+-   [Essensium/Mind](http://www.mind.be/), 比利时
+-   [FemtoLinux](http://www.femtolinux.com), 以色列
 -   [Free-Electrons](http://www.free-electrons.com), 法国
 -   [Forlinx Embedded](http://www.forlinx.net), 中国
 -   [Holoscópio Tecnologia Ltda.](http://holoscopio.com/), 巴西
@@ -44,9 +40,7 @@
 -   [Lineo Solutions](http://www.lineo.co.jp/eng/index.html), 日本
 -   [Linkodas](http://www.linkodas.com/), 立陶宛
 -   [Linutronix](http://www.linutronix.de/), 德国
--   [Mentor Graphics (embedded software
-    group)](http://www.mentor.com/products/embedded_software/),
-    全球
+-   [Mentor Graphics (embedded software group)](http://www.mentor.com/products/embedded_software/), 全球
 -   [MontaVista](http://www.mvista.com/), 全球
 -   [MPC Data](http://www.mpc-data.co.uk/embedded-linux/), 英国
 -   [MYIR](http://www.myirtech.com), 中国
@@ -73,7 +67,7 @@
 -   [ZhiYuan](http://www.zlg.cn/), 中国广州
 
 
-[Category](http://eLinux.org/Special:Categories "Special:Categories"):
+[目录](http://eLinux.org/Special:Categories "Special:Categories"):
 
--   [Companies](http://eLinux.org/Category:Companies "Category:Companies")
+-   [公司](http://eLinux.org/Category:Companies "Category:Companies")
 
