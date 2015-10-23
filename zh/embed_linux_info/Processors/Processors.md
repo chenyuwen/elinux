@@ -1,35 +1,34 @@
-> From: [eLinux.org](http://eLinux.org/Processors "http://eLinux.org/Processors")
+> 原文: [eLinux.org](http://eLinux.org/Processors "http://eLinux.org/Processors")<br />
+> 翻译：[@chenyuwen](https://github.com/chenyuwen)
+
+# 处理器
 
 
-# Processors
 
-
-
-Here is a list of different processor families, with miscellaneous notes
-for development information:
+这个页面主要列出一些不同的常用的处理器的各式各样的开发信息：
 
 See also [Hardware Hacking](../../dev_portals/Hardware_Hacking/Hardware_Hacking.md "Hardware Hacking") for a
 list of systems that include these processors.
 
-## Contents
+## 内容
 
 -   [1 ARC](#arc)
 -   [2 ARM](#arm)
 -   [3 MIPS](#mips)
 -   [4 SuperH](#superh)
-    -   [4.1 Renesas SuperH Overview](#renesas-superh-overview)
-    -   [4.2 Devices](#devices)
+    -   [4.1 瑞萨电子SuperH概括](#renesas-superh-overview)
+    -   [4.2 设备](#devices)
 -   [5 PowerPC](#powerpc)
-    -   [5.1 Processors](#processors)
-    -   [5.2 Tools](#tools)
-    -   [5.3 RT Patches](#rt-patches)
-    -   [5.4 Documents](#documents)
+    -   [5.1 处理器](#processors)
+    -   [5.2 工具](#tools)
+    -   [5.3 实时补丁](#rt-patches)
+    -   [5.4 文档](#documents)
 -   [6 XScale](#xscale)
 -   [7 x86](#x86)
 -   [8 AVR32](#avr32)
 -   [9 Blackfin](#blackfin)
 -   [10 m68k](#m68k)
--   [11 Further reading](#further-reading)
+-   [11 进一步阅读](#further-reading)
 
 ## ARC
 
@@ -44,11 +43,10 @@ are available via
 [GitHub](https://github.com/foss-for-synopsys-dwc-arc-processors).
 
 
- More information from Synopsys:
+ 来自Synopsys的更多信息:
 
--   [ARC Linux](http://www.synopsys.com/dw/ipdir.php?ds=sw_linux)
--   [GNU Toolchain for ARC
-    processors](http://www.synopsys.com/dw/ipdir.php?ds=sw_jtag_gnu)
+-   [ARC Linux系统](http://www.synopsys.com/dw/ipdir.php?ds=sw_linux)
+-   [ARC处理器的GNU工具链](http://www.synopsys.com/dw/ipdir.php?ds=sw_jtag_gnu)
 
 
 
@@ -58,24 +56,13 @@ See [ARM website](http://www.arm.com) and the [Wikipedia ARM
 article](http://en.wikipedia.org/wiki/ARM_architecture) for information
 about the ARM architecture and processor family.
 
-From the Linux perspective, there are 2 very different kinds of ARM
-chips:
+根据Linux系统的特性，把ARM处理器分成不同的两种类型：
+-   拥有内存管理单元（MMU）的ARM处理器可以直接运行Linux系统的标准版本。
+-   没有内存管理单元（MMU）的ARM处理器则需要使用经过定制的linux版本[uClinux](http://uclinux.org/)。该版本的Linux可运行于无MMU的平台或者其嵌入式处理器拥有内存保护单元（MPU）的情况。比较典型的处理器有：ARM7TDMI, ARM1156T2(F)-S 或 ARM Cortex-R4(F)。
 
--   ARM processors that include a memory management unit (MMU), and can
-    run standard Linux
--   ARM processors without MMU. These can run a modified version of
-    Linux called uClinux ( [http://uclinux.org/](http://uclinux.org/) ),
-    enabling Linux to run on MMUless platforms or embedded processors
-    with memory protection unit (MPU). These include ARM processors such
-    as ARM7TDMI, ARM1156T2(F)-S or ARM Cortex-R4(F) for instance.
+请注意：对于需要运行第三方代码或者不信任的代码的设备，出于安全性的考虑来说，不应该使用无内存管理单元（MMU）的处理器。而对于功能确定和单一的设备，使用无内存管理单元（MMU）的处理器是合理的。它们普遍来说比拥有MMU的处理器要便宜。
 
-Please note that because of security considerations for MMU-less
-processors, it is unwise to use them when 3rd-party or untrusted code
-will be running on the device. For locked-down, single function devices,
-MMU-less processors may be appropriate. They are usually less expensive
-than processors with MMU.
-
-Some major ARM platforms/SOCs are:
+ARM平台的一些主要的SOC芯片如下：
 
 -   [Sitara](http://eLinux.org/Sitara "Sitara"), [DaVinci](../.././dev_portals/Development_Platforms/DaVinci/DaVinci.md "DaVinci") and
     [OMAP](http://eLinux.org/OMAP "OMAP") from [Texas
@@ -104,34 +91,24 @@ Some major ARM platforms/SOCs are:
             kernel. You can find PXA3xx BSP from
             [Marvell](http://www.marvell.com/). Marvell team is working
             hard to get PXA3xx patches accepted by the mainline.
--   Orion - by Marvell
+-   Orion - Marvell公司
     -   Linux BSP for Orion-2 SoC available on [ARM Linux Mailing
         List](http://marc.info/?l=linux-arm-kernel&m=117869744222933&w=2).
--   Philips LPC21xx series of ARM processors are currently the
-    lowest-cost ARM processors available. But they have no MMU.
--   [JuiceBox](../.././dev_portals/Hardware_Hacking/JuiceBox/JuiceBox.md "JuiceBox") uses a ARM S3C44B0X. It runs
-    uClinux.
--   AT91 - by Atmel
-    -   [AT91RM9200](http://www.atmel.com/devices/RM9200.aspx) - ARM920T
-        based -- has MMU
-    -   [AT91SAM9
-        Series](http://www.atmel.com/products/microcontrollers/arm/default.aspx)
-        - ARM926EJ-S based -- has MMU
-    -   [SAMA5D3
-        Series](http://www.atmel.com/products/microcontrollers/ARM/sama5.aspx#SAMA5D3_series)
-        - Cortex-A5 based -- has MMU
-    -   [SAMA5D4
-        Series](http://www.atmel.com/products/microcontrollers/arm/sama5.aspx#SAMA5D4_series)
-        - Cortex-A5 based -- has MMU
+-   Philips的LPC21xx系列是目前功耗最低的ARM处理器，但其无MMU。
+-   [JuiceBox](../.././dev_portals/Hardware_Hacking/JuiceBox/JuiceBox.md "JuiceBox")使用S3C44B0X处理器，运行uClinux。
+-   AT91 - Atmel公司
+    -   [AT91RM9200](http://www.atmel.com/devices/RM9200.aspx) - ARM920T内核，带MMU
+    -   [AT91SAM9系列](http://www.atmel.com/products/microcontrollers/arm/default.aspx) - ARM926EJ-S内核，带MMU
+    -   [SAMA5D3系列](http://www.atmel.com/products/microcontrollers/ARM/sama5.aspx#SAMA5D3_series) - Cortex-A5内核，带MMU
+    -   [SAMA5D4系列](http://www.atmel.com/products/microcontrollers/arm/sama5.aspx#SAMA5D4_series) - Cortex-A5内核，带MMU
     -   Linux gateway : [www.linux4sam.org](http://www.linux4sam.org)
-    -   Github for Linux-based systems : [linux4sam.org
-        github](https://github.com/linux4sam)
+    -   Github for Linux-based systems : [linux4sam.org的github仓库](https://github.com/linux4sam)
 -   Cirrus Logic ([Linux forum and download
     site](http://arm.cirrus.com/))
-    -   EP73xx - ARM720T based
-    -   EP93xx - ARM920T based
--   Samsung Electronics (System LSI)
-    -   [S3C24xx](http://eLinux.org/S3C24xx "S3C24xx") - ARM 9 Series
+    -   EP73xx - ARM720T内核
+    -   EP93xx - ARM920T内核
+-   Samsung电子 (System LSI)
+    -   [S3C24xx](http://eLinux.org/S3C24xx "S3C24xx") - ARM 9 系列
         -   [S3C2410](../.././dev_portals/Development_Platforms/S3C2410/S3C2410.md "S3C2410")
             [[1]](http://www.samsung.com/global/business/semiconductor/productInfo.do?fmly_id=836&partnum=S3C2410&xFmly_id=229)
             - ARM920T
@@ -161,12 +138,12 @@ Some major ARM platforms/SOCs are:
             - ARM1176, 667Mhz, 533Mhz
         -   S5P6442
         -   S5P6450
-    -   Cortex-A8 Series
+    -   Cortex-A8 系列
         -   [S5PC100](http://www.samsung.com/global/business/semiconductor/productInfo.do?fmly_id=834&partnum=S5PC100&xFmly_id=229)
             - 833Mhz, 667Mhz
         -   [EXYNOS3110](http://www.samsung.com/global/business/semiconductor/productInfo.do?fmly_id=834&partnum=Exynos%203110&xFmly_id=229)
             - 1Ghz
-    -   Cortex-A9 Series
+    -   Cortex-A9 系列
         -   [EXYNOS4210](http://www.samsung.com/global/business/semiconductor/productInfo.do?fmly_id=844&partnum=Exynos%204210&xFmly_id=229)
             - 1.2Ghz, 1Ghz
 -   [Allwinner
