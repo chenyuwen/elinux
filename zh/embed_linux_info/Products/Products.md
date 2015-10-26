@@ -1,16 +1,16 @@
 > From: [eLinux.org](http://eLinux.org/Products "http://eLinux.org/Products")
 
 
-# Products
+# 产品
 
 
 
-Here is a list of products which use embedded Linux.
+本文主要列出了一些使用嵌入式 Linux 操作系统的产品。Here is a list of products which use embedded Linux.
 
 Please see the [talk page](http://eLinux.org/Talk:Products "Talk:Products") for
 information about how we want to populate this page.
 
-## Contents
+## 内容
 
 -   [1 Televisions](#televisions)
 -   [2 Mobile Phones](#mobile-phones)
@@ -71,22 +71,22 @@ information about how we want to populate this page.
 
 
 
-## Mobile Phones
+## 移动电话
 
 <table>
-<caption><strong>Mobile Phones using Embedded Linux</strong> </caption>
+<caption><strong>使用嵌入式 Linux 的移动电话Mobile Phones using Embedded Linux</strong> </caption>
 <thead>
 <tr class="header">
-<th align="left">Product Name</th>
-<th align="left">Company Name</th>
+<th align="left">产品名称</th>
+<th align="left">公司名称</th>
 <th align="left">Year<br />Introduced</th>
 <th align="left">RAM<br />MB</th>
 <th align="left">Flash<br />MB</th>
-<th align="left">Processor</th>
+<th align="left">处理器型号</th>
 <th align="left">Source or Notes</th>
-<th align="left">Download Area</th>
-<th align="left">Proprietary Drivers</th>
-<th align="left">Proprietary Software</th>
+<th align="left">下载地址</th>
+<th align="left">专有驱动Proprietary Drivers</th>
+<th align="left">专有软件Proprietary Software</th>
 </tr>
 </thead>
 <tbody>
