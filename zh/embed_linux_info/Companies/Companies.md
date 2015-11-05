@@ -1,13 +1,13 @@
 > From: [eLinux.org](http://eLinux.org/Companies "http://eLinux.org/Companies")
 
 
-# Companies
+# 公司
 
 
 
-## Contents
+## 内容
 
--   [1 Overview](#overview)
+-   [1 概述](#overview)
 -   [2 A](#a)
 -   [3 B](#b)
 -   [4 C](#c)
@@ -31,14 +31,18 @@
 -   [22 0-9](#0-9)
 -   [23 Instructions for submitters](#instructions-for-submitters)
 
-## Overview
+## 概述
 
+本文主要是提供一些开发和销售使用 Linux 操作系统的消费类电子产品的公司信息。
 This page provides information about companies that build and sell
-consumer electronics devices with Linux as their operating system. If
-you're looking for companies that build and sell Linux distributions for
+consumer electronics devices with Linux as their operating system. 
+
+如果您需要寻找一些构建和销售嵌入式设备所使用的 Linux 发行版的公司，或者您需要寻找一些提供嵌入式 Linux 有关的服务的公司，那么本文并不适合您，请转到[供应商](../../embed_linux_info/Vendors/Vendors.md "Vendors")页面。
+If you're looking for companies that build and sell Linux distributions for
 embedded devices or who provide services around embedded Linux, please
 see the [Vendors](../../embed_linux_info/Vendors/Vendors.md "Vendors") page.
 
+您也许想要寻找一些源代码下载网站。您将能找到许多来自于不同公司的开源代码软件。
 You may also want to look at the [Source code download
 sites](http://eLinux.org/Source_code_download_sites "Source code download sites") page,
 which has a list of places to get open source software from different
